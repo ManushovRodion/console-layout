@@ -1,0 +1,22 @@
+# Node artifact files
+node_modules
+dist
+
+# Generated OS
+.DS_Store
+Thumbs.db
+
+# Local files
+.local
+
+# Log files
+*.log
+
+# IDE
+.idea
+.vscode
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
