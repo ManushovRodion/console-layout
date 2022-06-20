@@ -15,13 +15,14 @@ function createOutputOption(
   type: Type,
   dirPackage: string,
   namePackage: string,
-  plugins: Plugin[] = []
+  plugins: Plugin[] = [],
+  inputFileName = 'main'
 ) {
-  let input = `${dirPackage}/src/main.ts`;
+  let input = `${dirPackage}/src/${inputFileName}.ts`;
   let output = {};
 
   if (type === 'type') {
-    input = `${dirPackage}/dist/type/main.d.ts`;
+    input = `${dirPackage}/dist/type/${inputFileName}.d.ts`;
     output = {
       file: `${dirPackage}/dist/${namePackage}.d.ts`,
     };
@@ -94,8 +95,20 @@ async function main(namePackage: string) {
     [dts()]
   );
 
+  const outputOptionDemo = createOutputOption(
+    'cjs',
+    dirPackage,
+    'demo',
+    [
+      typescript({ tsconfig: `${dirPackage}/tsconfig.json` }),
+      terser({ compress: true }),
+    ],
+    'demo'
+  );
+
   await Promise.allSettled(outputOptionsList.map((options) => build(options)));
   await build(outputOptionTypes);
+  await build(outputOptionDemo);
 
   removeSync(`${dirPackage}/dist/type`);
 

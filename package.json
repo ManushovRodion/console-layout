@@ -1,25 +1,33 @@
 {
-  "name": "name-package",
-  "version": "0.1.0",
-  "description": "",
+  "name": "console-layout",
+  "version": "1.0.0",
+  "description": "...",
   "license": "MIT",
-  "author": "{author-repo}",
+  "author": "ManushovRodion <rodion-krox@mauil.ru>",
   "repository": {
     "type": "git",
-    "url": "git+https://{git-repo}/{name-package}.git"
+    "url": "git+https://github.com/ManushovRodion/console-layout.git"
   },
   "bugs": {
-    "url": "https://{git-repo}/{name-package}/issues"
+    "url": "https://github.com/ManushovRodion/console-layout/issues"
   },
-  "homepage": "https://{git-repo}/{name-package}",
-  "main": "dist/{name-package}.cjs.js",
-  "types": "dist/{name-package}.d.ts",
-  "unpkg": "dist/{name-package}.umd.js",
-  "module": "dist/{name-package}.es.js",
+  "homepage": "https://github.com/ManushovRodion/console-layout",
+  "main": "dist/console-layout.cjs.js",
+  "types": "dist/console-layout.d.ts",
+  "unpkg": "dist/console-layout.umd.js",
+  "module": "dist/console-layout.es.js",
   "bin": {
-    "{name-package}": "./bin/cli.js"
+    "demo-console-layout": "./bin/cli.js"
   },
-  "keywords": [],
+  "keywords": [
+    "console",
+    "layout",
+    "grid",
+    "table",
+    "styles",
+    "js",
+    "node"
+  ],
   "files": [
     "dist"
   ],

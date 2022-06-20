@@ -1,21 +1,21 @@
 ### readme: [Home](./../README.md) | [RU](./README-RU.md)
 
-# {NAME-PACKAGE}
+# CONSOLE-LAYOUT
 
-> {description}
+> ...
 
 ## # Install
 
 For those who use NPM:
 
 ```sh
-npm install --save-dev {name-package}
+npm install console-layout
 ```
 
 For those who use YARN:
 
 ```sh
-yarn add {name-package} --dev
+yarn add console-layout
 ```
 
 ## # License

@@ -1,21 +1,21 @@
 ### readme: [Главная](./../README.md) | [EN](./README-EN.md)
 
-# {NAME-PACKAGE}
+# CONSOLE-LAYOUT
 
-> {description}
+> ...
 
 ## # Установка
 
 Для тех кто использует NPM:
 
 ```sh
-npm install --save-dev {name-package}
+npm install console-layout
 ```
 
 Для тех кто использует YARN:
 
 ```sh
-yarn add {name-package} --dev
+yarn add console-layout
 ```
 
 ## # Лицензия
