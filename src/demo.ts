@@ -1,4 +1,5 @@
 import {
+  line,
   //characterSequence,
   table,
   TableBodyCol,
@@ -39,28 +40,30 @@ export function cli() {
 
   // console.log(tableRow(theadCols));
 
-  // console.log(characterSequence('-', 20));
+  console.log(line(20, '-', '#'));
+  console.log(line(20));
+  console.log(line(20, '-', '#'));
 
   const tbody: TableBodyCol[][] = [
     [
       { text: '1', textAlign: 'center' },
       { text: 'test' },
       { text: '' },
-      { text: `\x1b[32mSuccess!\x1b\x1b[0m`}
+      { text: `\x1b[32mSuccess!\x1b\x1b[0m` },
     ],
     [
       { text: '2', textAlign: 'center' },
       { text: 'test 1' },
       { text: '' },
-      { text: 'success'}
+      { text: 'success' },
     ],
     [
       { text: '3', textAlign: 'center' },
       { text: 'test 2' },
       { text: '' },
-      { text: 'success'}
-    ]
-  ]
+      { text: 'success' },
+    ],
+  ];
 
   console.log(table([theadCols, theadCols2], tbody));
 }
