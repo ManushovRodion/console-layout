@@ -113,7 +113,7 @@ async function main(namePackage: string) {
   removeSync(`${dirPackage}/dist/type`);
 
   console.log('==============================================');
-  console.log(`\x1b[32mSuccess!\x1b\x1b[0m`);
+  console.log(`\x1b[32mSuccess!\x1b[0m`);
   process.exit(0);
 }
 

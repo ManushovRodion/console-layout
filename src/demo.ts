@@ -49,7 +49,7 @@ export function cli() {
       { text: '1', textAlign: 'center' },
       { text: 'test' },
       { text: '' },
-      { text: `\x1b[32mSuccess!\x1b\x1b[0m` },
+      { text: `\x1b[32mSuccess!\x1b[0m` },
     ],
     [
       { text: '2', textAlign: 'center' },
