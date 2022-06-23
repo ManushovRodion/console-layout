@@ -8,14 +8,8 @@ export type TableCol = {
 
 export function tableRow(cols: TableCol[], borderChar = '|') {
   const row = cols
-    .map((col) =>
-      tableCol(
-        col.text,
-        col.length,
-        col.textAlign
-      )
-    )
+    .map((col) => tableCol(col.text, col.length, col.textAlign))
     .join(borderChar);
 
-    return `${borderChar}${row}${borderChar}`
+  return `${borderChar}${row}${borderChar}`;
 }
