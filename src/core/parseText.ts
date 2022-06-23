@@ -6,7 +6,7 @@ export function parseText(
   indentBefore = 0,
   indentAfter = 0
 ) {
-  const regExp = new RegExp('\\u001b\\[[0-9]{1,2}(;[0-9])?m', 'g');
+  const regExp = new RegExp('(\\u001b|\\x1b)\\[[0-9]{1,2}(;[0-9])?m', 'g');
   const before = characterSequence(' ', indentBefore);
   const after = characterSequence(' ', indentAfter);
 
