@@ -6,17 +6,19 @@ export function parseText(
   indentBefore = 0,
   indentAfter = 0
 ) {
-  if (!text) return '';
+  const regExp = new RegExp('\\u001b\\[[0-9]{1,2}(;[0-9])?m', 'g');
+  const before = characterSequence(' ', indentBefore);
+  const after = characterSequence(' ', indentAfter);
 
-  let resultText = [
-    characterSequence(' ', indentBefore),
-    text.toString(),
-    characterSequence(' ', indentAfter),
-  ].join('');
+  const textNoAnsi = text.replace(regExp, '');
+  const template = text.replace(textNoAnsi, '#CONTEXT#');
+  let fullText = `${before}${textNoAnsi}${after}`;
 
-  if (resultText.length > maxLength) {
-    resultText = resultText.slice(0, maxLength);
+  if (fullText.length > maxLength) {
+    fullText = fullText.slice(0, maxLength);
   }
 
-  return resultText;
+  const context = template.replace('#CONTEXT#', fullText);
+
+  return { template, fullText, context };
 }

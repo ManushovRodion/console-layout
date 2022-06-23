@@ -7,11 +7,16 @@ export function textLeft(
   indentBefore = 0,
   indentAfter = 0
 ) {
-  const fullText = parseText(text, rowLength, indentBefore, indentAfter);
+  const { fullText, context } = parseText(
+    text,
+    rowLength,
+    indentBefore,
+    indentAfter
+  );
 
   if (fullText.length === rowLength) {
     return fullText;
   }
 
-  return `${fullText}${characterSequence(' ', rowLength - fullText.length)}`;
+  return `${context}${characterSequence(' ', rowLength - fullText.length)}`;
 }

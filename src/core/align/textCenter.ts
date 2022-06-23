@@ -7,7 +7,12 @@ export function textCenter(
   indentBefore = 0,
   indentAfter = 0
 ) {
-  const fullText = parseText(text, rowLength, indentBefore, indentAfter);
+  const { fullText, context } = parseText(
+    text,
+    rowLength,
+    indentBefore,
+    indentAfter
+  );
 
   if (fullText.length === rowLength) {
     return fullText;
@@ -23,5 +28,5 @@ export function textCenter(
     after = before = characterSequence(' ', maxLength / 2);
   }
 
-  return `${before}${fullText}${after}`;
+  return `${before}${context}${after}`;
 }
