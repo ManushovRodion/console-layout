@@ -18,7 +18,7 @@ export function textCenter(
 
   if (maxLength % 2) {
     after = characterSequence(' ', Math.floor(maxLength / 2));
-    before = ` ${after}`
+    before = ` ${after}`;
   } else {
     after = before = characterSequence(' ', maxLength / 2);
   }
