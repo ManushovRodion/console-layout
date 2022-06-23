@@ -1,6 +1,6 @@
-import { textCenter } from './textCenter';
-import { textLeft } from './textLeft';
-import { textRight } from './textRight';
+import { textCenter } from '../align/textCenter';
+import { textLeft } from '../align/textLeft';
+import { textRight } from '../align/textRight';
 
 export function tableCol(
   text: string,

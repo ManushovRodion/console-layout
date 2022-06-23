@@ -1,6 +1,6 @@
-import { characterSequence } from './characterSequence';
-import { render } from './render';
-import { tableRow } from './tableRow';
+import { characterSequence } from '../characterSequence';
+import { render } from '../render';
+import { tableRow } from '../table/tableRow';
 
 export type TableTheadCol = {
   text: string;
