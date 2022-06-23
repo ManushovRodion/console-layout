@@ -1,5 +1,5 @@
-import { characterSequence } from './characterSequence';
-import { parseText } from './parseText';
+import { characterSequence } from '../characterSequence';
+import { parseText } from '../parseText';
 
 export function textRight(
   text: string,
