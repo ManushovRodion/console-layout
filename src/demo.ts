@@ -40,9 +40,9 @@ export function cli() {
 
   // console.log(tableRow(theadCols));
 
-  console.log(line(20, '-', '#'));
-  console.log(line(20));
-  console.log(line(20, '-', '#'));
+  // console.log(line(20, '-', '#'));
+  // console.log(line(20));
+  // console.log(line(20, '-', '#'));
 
   const tbody: TableBodyCol[][] = [
     [
@@ -65,5 +65,11 @@ export function cli() {
     ],
   ];
 
-  console.log(table([theadCols, theadCols2], tbody));
+  console.log(
+    table([theadCols, theadCols2], tbody, {
+      hideOuterBorderVertical: true,
+      hideOuterBorderHorizon: true,
+      borderXChar: ' ',
+    })
+  );
 }

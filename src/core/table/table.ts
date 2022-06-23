@@ -1,6 +1,6 @@
-import { characterSequence } from '../characterSequence';
 import { render } from '../render';
 import { tableRow } from '../table/tableRow';
+import { tableHr } from './tableHr';
 
 export type TableTheadCol = {
   text: string;
@@ -18,6 +18,8 @@ type TableOptions = {
   borderVerticalChar?: string;
   borderXChar?: string;
   typeResult?: 'string' | 'array';
+  hideOuterBorderHorizon?: boolean;
+  hideOuterBorderVertical?: boolean;
 };
 
 function parseOptions(options: TableOptions = {}) {
@@ -33,21 +35,16 @@ function parseOptions(options: TableOptions = {}) {
   let { typeResult } = options;
   if (!typeResult) typeResult = 'string';
 
-  return { borderHorizonChar, borderVerticalChar, borderXChar, typeResult };
-}
+  const { hideOuterBorderHorizon, hideOuterBorderVertical } = options;
 
-function createHr(
-  cols: TableTheadCol[],
-  borderChar: string,
-  borderXChar: string
-) {
-  return [
+  return {
+    borderHorizonChar,
+    borderVerticalChar,
     borderXChar,
-    cols
-      .map((col) => characterSequence(borderChar, col.length))
-      .join(borderXChar),
-    borderXChar,
-  ].join('');
+    typeResult,
+    hideOuterBorderHorizon: hideOuterBorderHorizon === true,
+    hideOuterBorderVertical: hideOuterBorderVertical === true,
+  };
 }
 
 export function table(
@@ -55,24 +52,31 @@ export function table(
   tbodyCols: TableBodyCol[][],
   options?: TableOptions
 ) {
-  if (!theadCols?.length) return '';
-
   const opt = parseOptions(options);
+
+  if (!theadCols?.length) {
+    return opt.typeResult === 'array' ? [] : '';
+  }
+
   const nextColThead = theadCols[theadCols.length - 1];
 
-  const hrBefore = createHr(
-    theadCols[0],
+  const hrBefore = tableHr(
+    theadCols[0].map((col) => col.length),
     opt.borderHorizonChar,
-    opt.borderXChar
+    opt.borderXChar,
+    opt.hideOuterBorderVertical
   );
 
-  const hrAfter = createHr(
-    nextColThead,
+  const hrAfter = tableHr(
+    nextColThead.map((col) => col.length),
     opt.borderHorizonChar,
-    opt.borderXChar
+    opt.borderXChar,
+    opt.hideOuterBorderVertical
   );
 
-  const thead = theadCols.map((cols) => tableRow(cols, opt.borderVerticalChar));
+  const thead = theadCols.map((cols) =>
+    tableRow(cols, opt.borderVerticalChar, opt.hideOuterBorderVertical)
+  );
 
   const tbody = tbodyCols.map((cols) => {
     let fullCols = cols;
@@ -86,17 +90,23 @@ export function table(
       length: nextColThead[index].length,
     }));
 
-    return tableRow(colsBody, opt.borderVerticalChar);
+    return tableRow(
+      colsBody,
+      opt.borderVerticalChar,
+      opt.hideOuterBorderVertical
+    );
   });
 
   let data: string[] = [];
 
   if (thead.length) {
-    data = [hrBefore, ...thead, hrAfter];
+    if (!opt.hideOuterBorderHorizon) data.push(hrBefore);
+    data = [...data, ...thead, hrAfter];
   }
 
   if (tbody.length) {
-    data = [...data, ...tbody, hrAfter];
+    data = [...data, ...tbody];
+    if (!opt.hideOuterBorderHorizon) data.push(hrAfter);
   }
 
   if (opt.typeResult === 'array') {
