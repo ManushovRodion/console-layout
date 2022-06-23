@@ -12,11 +12,7 @@
     "declaration": true,
     "declarationDir": "type",
     "importHelpers": true,
-    "resolveJsonModule": true,
-    "paths": {
-      "@cli": ["./src/cli"],
-      "@core": ["./src/core"]
-    }
+    "resolveJsonModule": true
   },
   "include": ["**/*.ts"],
   "exclude": ["node_modules", "dist", "**/*.spec.ts", "scripts"]
