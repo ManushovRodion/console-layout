@@ -12,3 +12,5 @@ export * from './core/table/tableCol';
 export * from './core/table/tableRow';
 export * from './core/table/tableHr';
 export * from './core/table/table';
+
+export * from './core/window/window';

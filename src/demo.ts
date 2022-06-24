@@ -1,10 +1,13 @@
 import {
+  window,
+  render,
   //line,
   //characterSequence,
   table,
   TableBodyCol,
   TableBodyGroupRow,
   TableCol,
+  WindowTitle,
   // tableCol,
   // tableRow,
   // textCenter,
@@ -64,10 +67,26 @@ export function cli() {
     ],
   ];
 
-  console.log(
-    table([theadCols2], tbody, {
-      hideOuterBorderVertical: true,
-      hideOuterBorderHorizon: true,
-    })
-  );
+  let data = table([theadCols2], tbody, {
+    hideOuterBorderVertical: true,
+    hideOuterBorderHorizon: true,
+  });
+
+  let title: WindowTitle[] = [
+    {
+      text: 'Название утилиты'.toUpperCase(),
+      textAlign: 'right',
+    },
+    {
+      text: 'v1.21.32',
+      textAlign: 'right',
+    },
+  ];
+
+  data = window(data as string[], title, {
+    viewMargin: false,
+    hidePadding: false,
+  });
+
+  render(data);
 }
