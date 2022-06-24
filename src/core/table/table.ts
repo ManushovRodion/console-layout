@@ -40,7 +40,7 @@ function parseOptions(options: TableOptions = {}) {
   if (!borderXChar) borderXChar = '#';
 
   let { typeResult } = options;
-  if (!typeResult) typeResult = 'string';
+  if (!typeResult) typeResult = 'array';
 
   const { hideOuterBorderHorizon, hideOuterBorderVertical } = options;
 
@@ -89,24 +89,22 @@ export function table(
     tableRow(cols, opt.borderVerticalChar, opt.hideOuterBorderVertical)
   );
 
-  const tbody = tbodyCols.map((cols) => {
+  const tbody: string[] = [];
+  tbodyCols.forEach((cols) => {
     if (!Array.isArray(cols)) {
       const { groupName, textAlign } = cols;
+      const border = opt.hideOuterBorderVertical ? '' : opt.borderVerticalChar;
+      const length = opt.hideOuterBorderVertical
+        ? maxLengthRow - 2
+        : maxLengthRow;
 
-      const hr = line(
-        maxLengthRow,
-        ' ',
-        opt.hideOuterBorderVertical ? '' : opt.borderVerticalChar
-      );
+      const hr = line(length, ' ', border);
+      const row = rowText(groupName, length, textAlign, border);
 
-      const row = rowText(
-        groupName,
-        maxLengthRow,
-        textAlign,
-        opt.hideOuterBorderVertical ? '' : opt.borderVerticalChar
-      );
-
-      return render([hr, row, hr], false) as string;
+      tbody.push(hr);
+      tbody.push(row);
+      tbody.push(hr);
+      return;
     }
 
     let fullCols = cols;
@@ -120,11 +118,13 @@ export function table(
       length: nextColThead[index].length,
     }));
 
-    return tableRow(
+    const row = tableRow(
       colsBody,
       opt.borderVerticalChar,
       opt.hideOuterBorderVertical
     );
+
+    tbody.push(row);
   });
 
   let data: string[] = [];
@@ -143,5 +143,5 @@ export function table(
     return data;
   }
 
-  return render(data, false);
+  return render(data, false) as string;
 }
