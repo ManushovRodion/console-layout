@@ -1,5 +1,5 @@
 import {
-  line,
+  //line,
   //characterSequence,
   table,
   TableBodyCol,
@@ -26,7 +26,6 @@ export function cli() {
 
   // console.log(characterSequence('-', 20));
 
-
   const theadCols2: TableCol[] = [
     { text: '№', length: 5, textAlign: 'center' },
     { text: 'Название', length: 20 },
@@ -49,7 +48,7 @@ export function cli() {
     ],
     {
       groupName: 'GROUP',
-      textAlign: 'center'
+      textAlign: 'center',
     },
     [
       { text: '1', textAlign: 'center' },
@@ -66,7 +65,9 @@ export function cli() {
   ];
 
   console.log(
-    table([ theadCols2], tbody, {
+    table([theadCols2], tbody, {
+      hideOuterBorderVertical: true,
+      hideOuterBorderHorizon: true,
     })
   );
 }

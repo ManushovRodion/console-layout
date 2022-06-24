@@ -2,6 +2,7 @@ import { render } from '../render';
 import { tableRow } from './tableRow';
 import { tableHr } from './tableHr';
 import { line } from '../line';
+import { rowText } from '../rowText';
 
 export type TableTheadCol = {
   text: string;
@@ -91,20 +92,18 @@ export function table(
   const tbody = tbodyCols.map((cols) => {
     if (!Array.isArray(cols)) {
       const { groupName, textAlign } = cols;
+
       const hr = line(
         maxLengthRow,
         ' ',
         opt.hideOuterBorderVertical ? '' : opt.borderVerticalChar
       );
-      const col = {
-        text: groupName,
-        length: maxLengthRow - 2,
-        textAlign: textAlign,
-      };
-      const row = tableRow(
-        [col],
-        opt.borderVerticalChar,
-        opt.hideOuterBorderVertical
+
+      const row = rowText(
+        groupName,
+        maxLengthRow,
+        textAlign,
+        opt.hideOuterBorderVertical ? '' : opt.borderVerticalChar
       );
 
       return render([hr, row, hr], false) as string;
