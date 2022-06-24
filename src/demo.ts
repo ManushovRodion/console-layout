@@ -3,6 +3,7 @@ import {
   //characterSequence,
   table,
   TableBodyCol,
+  TableBodyGroupRow,
   TableCol,
   // tableCol,
   // tableRow,
@@ -25,15 +26,10 @@ export function cli() {
 
   // console.log(characterSequence('-', 20));
 
-  const theadCols: TableCol[] = [
-    { text: '', length: 5 },
-    { text: '', length: 20 },
-    { text: 'Информация', length: 51, textAlign: 'center' },
-  ];
 
   const theadCols2: TableCol[] = [
     { text: '№', length: 5, textAlign: 'center' },
-    { text: 'Название', length: 20, textAlign: 'center' },
+    { text: 'Название', length: 20 },
     { text: 'Описание', length: 30 },
     { text: 'Статус', length: 20, textAlign: 'right' },
   ];
@@ -44,29 +40,33 @@ export function cli() {
   // console.log(line(20));
   // console.log(line(20, '-', '#'));
 
-  const tbody: TableBodyCol[][] = [
+  const tbody: (TableBodyCol[] | TableBodyGroupRow)[] = [
     [
       { text: '1', textAlign: 'center' },
       { text: 'test' },
       { text: '' },
       { text: `\x1b[32mSuccess!\x1b[0m` },
     ],
+    {
+      groupName: 'GROUP',
+      textAlign: 'center'
+    },
     [
-      { text: '2', textAlign: 'center' },
+      { text: '1', textAlign: 'center' },
       { text: 'test 1' },
       { text: '' },
       { text: 'success' },
     ],
     [
-      { text: '3', textAlign: 'center' },
+      { text: '2', textAlign: 'center' },
       { text: 'test 2' },
       { text: '' },
-      { text: 'success' },
+      { text: 'success', textAlign: 'right' },
     ],
   ];
 
   console.log(
-    table([theadCols, theadCols2], tbody, {
+    table([ theadCols2], tbody, {
       hideOuterBorderVertical: true,
       hideOuterBorderHorizon: true,
       borderXChar: ' ',

@@ -1,6 +1,7 @@
 import { render } from '../render';
-import { tableRow } from '../table/tableRow';
+import { tableRow } from './tableRow';
 import { tableHr } from './tableHr';
+import { line } from '../line';
 
 export type TableTheadCol = {
   text: string;
@@ -10,6 +11,11 @@ export type TableTheadCol = {
 
 export type TableBodyCol = {
   text: string;
+  textAlign?: 'left' | 'right' | 'center';
+};
+
+export type TableBodyGroupRow = {
+  groupName: string;
   textAlign?: 'left' | 'right' | 'center';
 };
 
@@ -49,7 +55,7 @@ function parseOptions(options: TableOptions = {}) {
 
 export function table(
   theadCols: TableTheadCol[][],
-  tbodyCols: TableBodyCol[][],
+  tbodyCols: (TableBodyCol[] | TableBodyGroupRow)[],
   options?: TableOptions
 ) {
   const opt = parseOptions(options);
@@ -59,6 +65,10 @@ export function table(
   }
 
   const nextColThead = theadCols[theadCols.length - 1];
+  const maxLengthRow =
+    nextColThead.reduce((res, col) => res + col.length, 0) +
+    nextColThead.length +
+    1;
 
   const hrBefore = tableHr(
     theadCols[0].map((col) => col.length),
@@ -79,6 +89,27 @@ export function table(
   );
 
   const tbody = tbodyCols.map((cols) => {
+    if (!Array.isArray(cols)) {
+      const { groupName, textAlign } = cols;
+      const hr = line(
+        maxLengthRow,
+        ' ',
+        opt.hideOuterBorderVertical ? '' : opt.borderVerticalChar
+      );
+      const col = {
+        text: groupName,
+        length: maxLengthRow,
+        textAlign: textAlign,
+      };
+      const row = tableRow(
+        [col],
+        opt.borderVerticalChar,
+        opt.hideOuterBorderVertical
+      );
+
+      return render([hr, row, hr], false) as string;
+    }
+
     let fullCols = cols;
 
     if (nextColThead.length < cols.length) {
