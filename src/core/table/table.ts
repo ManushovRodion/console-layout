@@ -98,7 +98,7 @@ export function table(
       );
       const col = {
         text: groupName,
-        length: maxLengthRow,
+        length: maxLengthRow - 2,
         textAlign: textAlign,
       };
       const row = tableRow(

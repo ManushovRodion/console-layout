@@ -67,9 +67,6 @@ export function cli() {
 
   console.log(
     table([ theadCols2], tbody, {
-      hideOuterBorderVertical: true,
-      hideOuterBorderHorizon: true,
-      borderXChar: ' ',
     })
   );
 }
