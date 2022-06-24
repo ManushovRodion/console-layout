@@ -1,5 +1,5 @@
-export function render(items: string[], view = true) {
-  const result = items.join('\n');
+export function render(items: string[] | string, view = true) {
+  const result = typeof items === 'string' ? items : items.join('\n');
 
   if (!view) {
     return result;
