@@ -13,4 +13,4 @@ export * from './core/table/tableRow';
 export * from './core/table/tableHr';
 export * from './core/table/table';
 
-export * from './core/window/window';
+export * from './core/card/card';

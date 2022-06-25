@@ -3,7 +3,7 @@ import { parseText } from '../parseText';
 import { render } from '../render';
 import { rowText } from '../rowText';
 
-type WindowOptions = {
+type CardOptions = {
   borderHorizonChar?: string;
   borderVerticalChar?: string;
   borderXChar?: string;
@@ -12,12 +12,12 @@ type WindowOptions = {
   viewMargin?: boolean;
 };
 
-export type WindowTitle = {
+export type CardTitle = {
   text: string;
   textAlign?: 'left' | 'right' | 'center';
 };
 
-function parseOptions(options: WindowOptions = {}) {
+function parseOptions(options: CardOptions = {}) {
   let { borderHorizonChar } = options;
   if (!borderHorizonChar) borderHorizonChar = '-';
 
@@ -42,10 +42,10 @@ function parseOptions(options: WindowOptions = {}) {
   };
 }
 
-export function window(
+export function card(
   context: string[],
-  title: WindowTitle[] | WindowTitle = [],
-  options?: WindowOptions
+  title: CardTitle[] | CardTitle = [],
+  options?: CardOptions
 ) {
   const opt = parseOptions(options);
 

@@ -1,92 +1,59 @@
 import {
-  window,
+  card,
+  CardTitle,
   render,
-  //line,
-  //characterSequence,
   table,
   TableBodyCol,
   TableBodyGroupRow,
-  TableCol,
-  WindowTitle,
-  // tableCol,
-  // tableRow,
-  // textCenter,
-  // textLeft,
-  // textRight,
+  TableTheadCol,
 } from './main';
 
 export function cli() {
-  // console.log(['#', textLeft('test', 10), '#'].join(''));
-  // console.log(['#', textCenter('test', 10), '#'].join(''));
-  // console.log(['#', textCenter('testI', 10), '#'].join(''));
-  // console.log(['#', textRight('test', 10), '#'].join(''));
-
-  // console.log(characterSequence('-', 20));
-
-  // console.log(tableCol('test', 12));
-  // console.log(tableCol('test', 12, 'center'));
-  // console.log(tableCol('test', 12, 'right'));
-
-  // console.log(characterSequence('-', 20));
-
-  const theadCols2: TableCol[] = [
-    { text: '№', length: 5, textAlign: 'center' },
-    { text: 'Название', length: 20 },
-    { text: 'Описание', length: 30 },
-    { text: 'Статус', length: 20, textAlign: 'right' },
+  const theadCols: TableTheadCol[][] = [
+    [
+      { text: '#', length: 5, textAlign: 'center' },
+      { text: 'name', length: 30 },
+      { text: 'example', length: 30, textAlign: 'center' },
+    ],
   ];
 
-  // console.log(tableRow(theadCols));
-
-  // console.log(line(20, '-', '#'));
-  // console.log(line(20));
-  // console.log(line(20, '-', '#'));
-
-  const tbody: (TableBodyCol[] | TableBodyGroupRow)[] = [
+  const tbodyCols: (TableBodyCol[] | TableBodyGroupRow)[] = [
+    { groupName: 'text align'.toUpperCase() },
     [
       { text: '1', textAlign: 'center' },
-      { text: 'test' },
-      { text: '' },
-      { text: `\x1b[32mSuccess!\x1b[0m` },
-    ],
-    {
-      groupName: 'GROUP',
-      textAlign: 'center',
-    },
-    [
-      { text: '1', textAlign: 'center' },
-      { text: 'test 1' },
-      { text: '' },
-      { text: 'success' },
+      { text: 'textLeft' },
+      { text: 'text' },
     ],
     [
       { text: '2', textAlign: 'center' },
-      { text: 'test 2' },
-      { text: '' },
-      { text: 'success', textAlign: 'right' },
+      { text: 'textCenter' },
+      { text: 'text', textAlign: 'center' },
+    ],
+    [
+      { text: '3', textAlign: 'center' },
+      { text: 'textRight' },
+      { text: 'text', textAlign: 'right' },
     ],
   ];
 
-  let data = table([theadCols2], tbody, {
-    hideOuterBorderVertical: true,
+  const contextTable = table(theadCols, tbodyCols, {
     hideOuterBorderHorizon: true,
-  });
+    hideOuterBorderVertical: true,
+    borderXChar: ' ',
+  }) as string[];
 
-  let title: WindowTitle[] = [
+  const cardTitle: CardTitle[] = [
     {
-      text: 'Название утилиты'.toUpperCase(),
-      textAlign: 'right',
-    },
-    {
-      text: 'v1.21.32',
-      textAlign: 'right',
-    },
+    text: 'Demo'.toUpperCase(),
+    textAlign: 'right',
+  },
+  {
+    text: 'v1.23.1'.toUpperCase(),
+    textAlign: 'right',
+  }
   ];
 
-  data = window(data as string[], title, {
-    viewMargin: false,
-    hidePadding: false,
-  });
+  const contextCard = card(contextTable, cardTitle);
 
-  render(data);
+  render(contextCard);
 }
