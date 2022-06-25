@@ -99,7 +99,7 @@ export function table(
         : maxLengthRow;
 
       const hr = line(length, ' ', border);
-      const row = rowText(groupName, length, textAlign, border);
+      const row = rowText(` ${groupName} `, length, textAlign, border);
 
       tbody.push(hr);
       tbody.push(row);
