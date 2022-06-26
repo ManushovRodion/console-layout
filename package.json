@@ -1,7 +1,7 @@
 {
   "name": "console-layout",
   "version": "1.0.0",
-  "description": "...",
+  "description": "[RU]Пакет, который содержит набор утилит, которые позволят создать основу дизайна вашей консоли.[EN]A package that contains a set of utilities that will allow you to create the basic design of your console.",
   "license": "MIT",
   "author": "ManushovRodion <rodion-krox@mauil.ru>",
   "repository": {
@@ -24,6 +24,9 @@
     "layout",
     "grid",
     "table",
+    "window",
+    "cart",
+    "text-align",
     "styles",
     "js",
     "node"

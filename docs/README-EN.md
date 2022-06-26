@@ -2,7 +2,9 @@
 
 # CONSOLE-LAYOUT
 
-> ...
+> A package that contains a set of utilities that will allow you to create the basic design of your console.
+
+![demo.png](./assets/DEMO.png)
 
 ## # Install
 
