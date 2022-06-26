@@ -2,7 +2,9 @@
 
 # CONSOLE-LAYOUT
 
-> ...
+> Пакет, который содержит набор утилит, которые позволят создать основу дизайна вашей консоли.
+
+![demo.png](./assets/demo.png)
 
 ## # Установка
 
@@ -17,6 +19,13 @@ npm install console-layout
 ```sh
 yarn add console-layout
 ```
+
+## # Документация
+
+- [Положение текста](./api/TEXT-ALIGN-RU.md)
+- [Таблицы](./api/TABLE-RU.md)
+- [Карточка](./api/CARD-RU.md)
+- [Разные](./api/OTHER-RU.md) 
 
 ## # Лицензия
 
