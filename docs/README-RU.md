@@ -25,7 +25,7 @@ yarn add console-layout
 - [Положение текста](./api/TEXT-ALIGN-RU.md)
 - [Таблицы](./api/TABLE-RU.md)
 - [Карточка](./api/CARD-RU.md)
-- [Разные](./api/OTHER-RU.md) 
+- [Разные api](./api/OTHER-RU.md) 
 
 ## # Лицензия
 

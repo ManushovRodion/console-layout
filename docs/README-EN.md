@@ -18,6 +18,13 @@ For those who use YARN:
 yarn add console-layout
 ```
 
+## # Documentation
+
+- [Text Align](./api/TEXT-ALIGN-EN.md)
+- [Table](./api/TABLE-EN.md)
+- [Card](./api/CARD-EN.md)
+- [Other](./api/OTHER-EN.md) 
+
 ## # License
 
 [MIT](./../LICENSE)
