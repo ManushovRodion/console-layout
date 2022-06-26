@@ -3,20 +3,20 @@ import { parseText } from '../parseText';
 
 export function textLeft(
   text: string,
-  rowLength: number,
+  maxRowLength: number,
   indentBefore = 0,
   indentAfter = 0
 ) {
   const { fullText, context } = parseText(
     text,
-    rowLength,
+    maxRowLength,
     indentBefore,
     indentAfter
   );
 
-  if (fullText.length === rowLength) {
+  if (fullText.length === maxRowLength) {
     return fullText;
   }
 
-  return `${context}${characterSequence(' ', rowLength - fullText.length)}`;
+  return `${context}${characterSequence(' ', maxRowLength - fullText.length)}`;
 }

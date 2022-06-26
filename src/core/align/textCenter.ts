@@ -3,23 +3,23 @@ import { parseText } from '../parseText';
 
 export function textCenter(
   text: string,
-  rowLength: number,
+  maxRowLength: number,
   indentBefore = 0,
   indentAfter = 0
 ) {
   const { fullText, context } = parseText(
     text,
-    rowLength,
+    maxRowLength,
     indentBefore,
     indentAfter
   );
 
-  if (fullText.length === rowLength) {
+  if (fullText.length === maxRowLength) {
     return fullText;
   }
 
   let after, before;
-  const maxLength = rowLength - fullText.length;
+  const maxLength = maxRowLength - fullText.length;
 
   if (maxLength % 2) {
     after = characterSequence(' ', Math.floor(maxLength / 2));
