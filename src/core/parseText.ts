@@ -10,14 +10,15 @@ export function parseText(
   const before = characterSequence(' ', indentBefore);
   const after = characterSequence(' ', indentAfter);
 
-  const textNoAnsi = text.replace(regExp, '');
+  let textNoAnsi = text.replace(regExp, '');
   const template = text.replace(textNoAnsi, '#CONTEXT#');
-  let fullText = `${before}${textNoAnsi}${after}`;
+  const length = maxLength - indentBefore - indentAfter
 
-  if (fullText.length > maxLength) {
-    fullText = fullText.slice(0, maxLength);
+  if (textNoAnsi.length > length) {
+    textNoAnsi = textNoAnsi.slice(0, length);
   }
 
+  const fullText = `${before}${textNoAnsi}${after}`;
   const context = template.replace('#CONTEXT#', fullText);
 
   return { template, fullText, context };
