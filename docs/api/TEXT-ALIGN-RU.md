@@ -60,7 +60,7 @@ console.log(`|${context3}|`);
 Утилита, которая позволяет сформировать строку определеной длины и разместить в данной области текст по центру. Если текст не помещается в длину строки, то текст обрезается до заданной длины.
 
 ```ts
-import { textCenter } from './main';
+import { textCenter } from 'console-layout';
 
 const context0 = textCenter('01234', 10); // |   01234  |
 console.log(`|${context0}|`);
