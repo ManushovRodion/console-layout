@@ -1,59 +1,38 @@
-import {
-  card,
-  CardTitle,
-  render,
-  table,
-  TableBodyCol,
-  TableBodyGroupRow,
-  TableTheadCol,
-} from './main';
+import { TableColumn, TableItem, TableItemGroup } from './core/table/types';
+import { table } from './main';
 
-export function cli() {
-  const theadCols: TableTheadCol[][] = [
-    [
-      { text: '#', length: 5, textAlign: 'center' },
-      { text: 'name', length: 30 },
-      { text: 'example', length: 30, textAlign: 'center' },
-    ],
-  ];
 
-  const tbodyCols: (TableBodyCol[] | TableBodyGroupRow)[] = [
-    { groupName: 'text align'.toUpperCase() },
-    [
-      { text: '1', textAlign: 'center' },
-      { text: 'textLeft' },
-      { text: 'text' },
-    ],
-    [
-      { text: '2', textAlign: 'center' },
-      { text: 'textCenter' },
-      { text: 'text', textAlign: 'center' },
-    ],
-    [
-      { text: '3', textAlign: 'center' },
-      { text: 'textRight' },
-      { text: 'text', textAlign: 'right' },
-    ],
-  ];
 
-  const contextTable = table(theadCols, tbodyCols, {
-    hideOuterBorderHorizon: true,
-    hideOuterBorderVertical: true,
-    borderXChar: ' ',
-  }) as string[];
+const columns: TableColumn[][] = [
+  [
+    { name: '', width: 5 },
+    { name: 'info'.toUpperCase(), width: 92, textAlign: 'center' }, // 90 + 2 border
+  ],
+  [
+    { name: '#', width: 5, textAlign: 'center' },
+    { name: 'name', width: 30 },
+    { name: 'description', width: 40 },
+    { name: 'status', width: 20, textAlign: 'right' },
+  ],
+];
 
-  const cardTitle: CardTitle[] = [
-    {
-    text: 'Demo'.toUpperCase(),
-    textAlign: 'right',
-  },
-  {
-    text: 'v1.23.1'.toUpperCase(),
-    textAlign: 'right',
-  }
-  ];
+const items: TableItem[][] = [1, 2, 3, 4, 5].map((data) => [
+  { context: (data - 1).toString(), textAlign: 'center' },
+  { context: `random name ${data}` },
+  { context: `random description ${data}` },
+  { context: `random status ${data}`, textAlign: 'right' },
+]);
 
-  const contextCard = card(contextTable, cardTitle);
+const group: TableItemGroup[] = [{ name: 'group'.toUpperCase() }];
 
-  render(contextCard);
-}
+const contextTable = table(columns, [
+  ...group,
+  ...items,
+  ...group,
+  ...items,
+]) as string[];
+
+const context = contextTable.join('\n');
+console.log(context);
+
+export function cli() {}

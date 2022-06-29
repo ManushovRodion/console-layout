@@ -1,19 +1,21 @@
 import { textCenter } from '../align/textCenter';
 import { textLeft } from '../align/textLeft';
 import { textRight } from '../align/textRight';
+import { Context } from '../types';
+import { TextAlign } from './types';
 
 export function tableCol(
-  text: string,
-  length: number,
-  textAlign: 'left' | 'right' | 'center' = 'left'
+  context: Context,
+  width: number,
+  textAlign: TextAlign = 'left'
 ) {
   if (textAlign === 'center') {
-    return textCenter(text, length, 1, 1);
+    return textCenter(context, width, 1, 1);
   }
 
   if (textAlign === 'right') {
-    return textRight(text, length, 1, 1);
+    return textRight(context, width, 1, 1);
   }
 
-  return textLeft(text, length, 1, 1);
+  return textLeft(context, width, 1, 1);
 }

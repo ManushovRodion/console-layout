@@ -1,14 +1,15 @@
 import { characterSequence } from '../characterSequence';
 import { parseText } from '../parseText';
+import { Context } from '../types';
 
 export function textLeft(
-  text: string,
+  context: Context,
   maxRowLength: number,
   indentBefore = 0,
   indentAfter = 0
 ) {
-  const { fullText, context } = parseText(
-    text,
+  const { fullText, text } = parseText(
+    context,
     maxRowLength,
     indentBefore,
     indentAfter
@@ -18,5 +19,5 @@ export function textLeft(
     return fullText;
   }
 
-  return `${context}${characterSequence(' ', maxRowLength - fullText.length)}`;
+  return `${text}${characterSequence(' ', maxRowLength - fullText.length)}`;
 }

@@ -10,7 +10,7 @@ export * from './core/align/textCenter';
 
 export * from './core/table/tableCol';
 export * from './core/table/tableRow';
-export * from './core/table/tableHr';
+export * from './core/table/tableBorder';
 export * from './core/table/table';
 
 export * from './core/card/card';
