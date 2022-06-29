@@ -83,8 +83,8 @@ console.log(`|${context3}|`);
 | 3        | indentBefore | number         | false          | 0            | дополнительный отступ перед текстом                                                                                                      |
 | 4        | indentAfter  | number         | false          | 0            | дополнительный отступ после текстом                                                                                                      |
 
-### # Меню
+## # Документация
 
-- [Таблицы](./TABLE-RU.md)
-- [Карточка](./CARD-RU.md)
-- [Разные](./OTHER-RU.md)
+- [Таблицы](./api/TABLE-RU.md)
+- [Карточка](./api/CARD-RU.md)
+- [Разные api](./api/OTHER-RU.md)

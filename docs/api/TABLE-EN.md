@@ -184,3 +184,9 @@ console.log(context); // | text     |   text   |     text |
 | 1        | context   | string, number             | true     | -       | column content               |
 | 2        | width     | number                     | true     | -       | column width                 |
 | 3        | textAlign | 'left', 'right' , 'center' | false    | 'left'  | position of text in a column |
+
+## # Documentation
+
+- [Text Align](./api/TEXT-ALIGN-EN.md)
+- [Card](./api/CARD-EN.md)
+- [Other](./api/OTHER-EN.md)

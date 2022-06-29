@@ -83,8 +83,8 @@ console.log(`|${context3}|`);
 | 3        | indentBefore | number         | false    | 0       | additional indent before text                                                                                                              |
 | 4        | indentAfter  | number         | false    | 0       | extra padding after text                                                                                                                   |
 
-### # Меню
+## # Documentation
 
-- [Таблицы](./TABLE-RU.md)
-- [Карточка](./CARD-RU.md)
-- [Разные](./OTHER-RU.md)
+- [Table](./api/TABLE-EN.md)
+- [Card](./api/CARD-EN.md)
+- [Other](./api/OTHER-EN.md)

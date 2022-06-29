@@ -103,10 +103,10 @@ const context3 = tableBorder([2, 4, 6]);
 console.log(context3); // #--#----#------#
 ```
 
-| Аргумент | Название | Тип                | Обязательность | По умолчанию | Описание       |
-| -------- | -------- | ------------------ | -------------- | ------------ | -------------- |
+| Аргумент | Название | Тип                | Обязательность | По умолчанию | Описание        |
+| -------- | -------- | ------------------ | -------------- | ------------ | --------------- |
 | 1        | width    | number[]           | true           | -            | массив отрезков |
-| 2        | options  | TableBorderOptions | false          | -            | опции утилиты  |
+| 2        | options  | TableBorderOptions | false          | -            | опции утилиты   |
 
 #### тип **TableBorderOptions**
 
@@ -141,10 +141,10 @@ const context3 = tableRow(columns, { hideOuterBorder: true, borderChar: 'X' });
 console.log(context3); //  random text 1                X              random status 1
 ```
 
-| Аргумент | Название | Тип              | Обязательность | По умолчанию | Описание      |
-| -------- | -------- | ---------------- | -------------- | ------------ | ------------- |
+| Аргумент | Название | Тип              | Обязательность | По умолчанию | Описание       |
+| -------- | -------- | ---------------- | -------------- | ------------ | -------------- |
 | 1        | columns  | TableRowColumn[] | true           | -            | массив колонок |
-| 2        | options  | TableRowOptions  | false          | -            | опции утилиты |
+| 2        | options  | TableRowOptions  | false          | -            | опции утилиты  |
 
 #### тип **TableRowColumn**
 
@@ -184,3 +184,9 @@ console.log(context); // | text     |   text   |     text |
 | 1        | context   | string, number             | true           | -            | содержимое колонки         |
 | 2        | width     | number                     | true           | -            | ширина колонки             |
 | 3        | textAlign | 'left', 'right' , 'center' | false          | 'left'       | положение текста в колонке |
+
+## # Документация
+
+- [Положение текста](./api/TEXT-ALIGN-RU.md)
+- [Карточка](./api/CARD-RU.md)
+- [Разные api](./api/OTHER-RU.md)
