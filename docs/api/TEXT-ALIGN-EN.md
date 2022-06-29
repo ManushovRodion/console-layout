@@ -85,6 +85,6 @@ console.log(`|${context3}|`);
 
 ## # Documentation
 
-- [Table](./api/TABLE-EN.md)
-- [Card](./api/CARD-EN.md)
-- [Other](./api/OTHER-EN.md)
+- [Table](./TABLE-EN.md)
+- [Card](./CARD-EN.md)
+- [Other](./OTHER-EN.md)

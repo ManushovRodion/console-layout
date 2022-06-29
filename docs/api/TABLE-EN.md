@@ -187,6 +187,6 @@ console.log(context); // | text     |   text   |     text |
 
 ## # Documentation
 
-- [Text Align](./api/TEXT-ALIGN-EN.md)
-- [Card](./api/CARD-EN.md)
-- [Other](./api/OTHER-EN.md)
+- [Text Align](./TEXT-ALIGN-EN.md)
+- [Card](./CARD-EN.md)
+- [Other](./OTHER-EN.md)

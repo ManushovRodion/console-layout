@@ -187,6 +187,6 @@ console.log(context); // | text     |   text   |     text |
 
 ## # Документация
 
-- [Положение текста](./api/TEXT-ALIGN-RU.md)
-- [Карточка](./api/CARD-RU.md)
-- [Разные api](./api/OTHER-RU.md)
+- [Положение текста](./TEXT-ALIGN-RU.md)
+- [Карточка](./CARD-RU.md)
+- [Разные api](./OTHER-RU.md)
