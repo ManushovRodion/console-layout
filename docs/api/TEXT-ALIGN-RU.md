@@ -85,6 +85,6 @@ console.log(`|${context3}|`);
 
 ## # Документация
 
-- [Таблицы](./TABLE-RU.md)
+- [Таблица](./TABLE-RU.md)
 - [Карточка](./CARD-RU.md)
 - [Разные api](./OTHER-RU.md)
