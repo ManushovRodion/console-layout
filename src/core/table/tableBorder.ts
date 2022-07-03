@@ -1,4 +1,4 @@
-import { characterSequence } from '../characterSequence';
+import { characterSequence } from '../other/characterSequence';
 import { TableBorderOptions } from './types';
 
 function parseOptions(options: TableBorderOptions = {}) {

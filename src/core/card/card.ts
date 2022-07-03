@@ -1,4 +1,4 @@
-import { characterSequence } from '../characterSequence';
+import { characterSequence } from '../other/characterSequence';
 import { parseText } from '../other/parseText';
 import { render } from '../render';
 import { rowText } from '../rowText';

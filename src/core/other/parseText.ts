@@ -1,4 +1,4 @@
-import { characterSequence } from '../characterSequence';
+import { characterSequence } from './characterSequence';
 import { Context } from '../types';
 import { ParseTextOptions } from './types';
 
