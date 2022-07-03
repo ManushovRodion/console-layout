@@ -95,20 +95,20 @@ async function main(namePackage: string) {
     [dts()]
   );
 
-  const outputOptionDemo = createOutputOption(
-    'cjs',
-    dirPackage,
-    'demo',
-    [
-      typescript({ tsconfig: `${dirPackage}/tsconfig.json` }),
-      terser({ compress: true }),
-    ],
-    'demo'
-  );
+  // const outputOptionDemo = createOutputOption(
+  //   'cjs',
+  //   dirPackage,
+  //   'demo',
+  //   [
+  //     typescript({ tsconfig: `${dirPackage}/tsconfig.json` }),
+  //     terser({ compress: true }),
+  //   ],
+  //   'demo'
+  // );
 
   await Promise.allSettled(outputOptionsList.map((options) => build(options)));
   await build(outputOptionTypes);
-  await build(outputOptionDemo);
+  //await build(outputOptionDemo);
 
   removeSync(`${dirPackage}/dist/type`);
 
