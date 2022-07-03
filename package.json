@@ -16,9 +16,6 @@
   "types": "dist/console-layout.d.ts",
   "unpkg": "dist/console-layout.umd.js",
   "module": "dist/console-layout.es.js",
-  "bin": {
-    "demo-console-layout": "./bin/cli.js"
-  },
   "keywords": [
     "console",
     "layout",
@@ -37,8 +34,7 @@
   "scripts": {
     "lint": "eslint",
     "lint:format": "prettier --write .",
-    "build": "ts-node scripts/build.ts",
-    "demo:cli": "node bin/cli.js"
+    "build": "ts-node scripts/build.ts"
   },
   "dependencies": {},
   "devDependencies": {
