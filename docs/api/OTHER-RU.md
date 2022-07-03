@@ -147,8 +147,8 @@ console.log(context);
 
 - [Положение текста](./TEXT-ALIGN-RU.md)
   - [textLeft](./TEXT-ALIGN-RU.md#-text-left)
-  - [textCenter](./TEXT-ALIGN-RU.md#-text-center)
   - [textRight](./TEXT-ALIGN-RU.md#-text-right)
+  - [textCenter](./TEXT-ALIGN-RU.md#-text-center)
 - [Таблица](./TABLE-RU.md)
   - [table](./TABLE-RU.md#-table)
   - [tableBorder](./TABLE-RU.md#-table-border)

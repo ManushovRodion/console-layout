@@ -25,7 +25,7 @@ yarn add console-layout
 - [Text Align](./api/TEXT-ALIGN-EN.md)
 - [Table](./api/TABLE-EN.md)
 - [Card](./api/CARD-EN.md)
-- [Other](./api/OTHER-EN.md) 
+- [Other](./api/OTHER-EN.md)
 
 ## # License
 

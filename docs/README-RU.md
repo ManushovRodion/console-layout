@@ -24,8 +24,8 @@ yarn add console-layout
 
 - [Положение текста](./api/TEXT-ALIGN-RU.md)
   - [textLeft](./api/TEXT-ALIGN-RU.md#-text-left)
-  - [textCenter](./api/TEXT-ALIGN-RU.md#-text-center)
   - [textRight](./api/TEXT-ALIGN-RU.md#-text-right)
+  - [textCenter](./api/TEXT-ALIGN-RU.md#-text-center)
 - [Таблица](./api/TABLE-RU.md)
   - [table](./api/TABLE-RU.md#-table)
   - [tableBorder](./api/TABLE-RU.md#-table-border)
