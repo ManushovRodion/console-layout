@@ -1,6 +1,6 @@
 import { characterSequence } from '../other/characterSequence';
 import { parseText } from '../other/parseText';
-import { render } from '../render';
+import { render } from '../other/render';
 import { rowText } from '../rowText';
 import { CardOptions, CardTitle } from './types';
 

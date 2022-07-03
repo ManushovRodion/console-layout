@@ -9,7 +9,7 @@ import {
 } from './types';
 import { tableRow } from './tableRow';
 import { tableBorder } from './tableBorder';
-import { render } from '../render';
+import { render } from '../other/render';
 import { line } from '../other/line';
 import { rowText } from '../rowText';
 

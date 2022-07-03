@@ -2,7 +2,7 @@ export * from './core/other/parseText';
 export * from './core/other/characterSequence';
 export * from './core/other/line';
 export * from './core/rowText';
-export * from './core/render';
+export * from './core/other/render';
 
 export * from './core/align/textLeft';
 export * from './core/align/textRight';
