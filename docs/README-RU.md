@@ -23,9 +23,17 @@ yarn add console-layout
 ## # Документация
 
 - [Положение текста](./api/TEXT-ALIGN-RU.md)
-- [Таблицы](./api/TABLE-RU.md)
+- - [textLeft](./api/TEXT-ALIGN-RU.md#text-left)
+- - [textCenter](./api/TEXT-ALIGN-RU.md#text-center)
+- - [textRight](./api/TEXT-ALIGN-RU.md#text-right)
+- [Таблица](./api/TABLE-RU.md)
+- - [table](./api/TABLE-RU.md#table)
+- - [tableBorder](./api/TABLE-RU.md#table-border)
+- - [tableRow](./api/TABLE-RU.md#table-row)
+- - [tableCol](./api/TABLE-RU.md#table-col)
 - [Карточка](./api/CARD-RU.md)
-- [Разные api](./api/OTHER-RU.md) 
+- - [card](./api/CARD-RU.md#card)
+- [Разные api](./api/OTHER-RU.md)
 
 ## # Лицензия
 
