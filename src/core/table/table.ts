@@ -11,7 +11,7 @@ import { tableRow } from './tableRow';
 import { tableBorder } from './tableBorder';
 import { render } from '../other/render';
 import { line } from '../other/line';
-import { rowText } from '../rowText';
+import { rowText } from '../other/rowText';
 
 function parseOptions(options: TableOptions = {}) {
   let { borderHorizonChar } = options;
@@ -92,7 +92,10 @@ export function table(
         : maxLengthRow;
 
       const hr = line(length, ' ', border);
-      const row = rowText(` ${name} `, length, textAlign, border);
+      const row = rowText(` ${name} `, length, {
+        textAlign,
+        borderChar: border,
+      });
 
       tbody.push(hr);
       tbody.push(row);

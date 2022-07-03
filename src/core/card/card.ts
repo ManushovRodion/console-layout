@@ -1,7 +1,7 @@
 import { characterSequence } from '../other/characterSequence';
 import { parseText } from '../other/parseText';
 import { render } from '../other/render';
-import { rowText } from '../rowText';
+import { rowText } from '../other/rowText';
 import { CardOptions, CardTitle } from './types';
 
 function parseOptions(options: CardOptions = {}) {
@@ -98,12 +98,10 @@ export function card(
 
   const head = titleList.map((title) => {
     const text = `${fullPadding}${title.context}${fullPadding}`;
-    const row = rowText(
-      text,
-      opt.viewMargin ? width - 2 : width,
-      title.textAlign,
-      opt.borderVerticalChar
-    );
+    const row = rowText(text, opt.viewMargin ? width - 2 : width, {
+      textAlign: title.textAlign,
+      borderChar: opt.borderVerticalChar,
+    });
     return `${margin}${row}${margin}`;
   });
 
