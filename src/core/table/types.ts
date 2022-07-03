@@ -33,7 +33,7 @@ export type TableRowColumn = {
 
 export type TableRowOptions = {
   borderChar?: string;
-  hideOuterBorder?: boolean
+  hideOuterBorder?: boolean;
 };
 
 export type TableBorderOptions = {
