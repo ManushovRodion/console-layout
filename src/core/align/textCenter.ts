@@ -1,5 +1,5 @@
 import { characterSequence } from '../characterSequence';
-import { parseText } from '../parseText';
+import { parseText } from '../other/parseText';
 import { Context } from '../types';
 
 export function textCenter(
@@ -8,12 +8,11 @@ export function textCenter(
   indentBefore = 0,
   indentAfter = 0
 ) {
-  const { textNoAnsi, text } = parseText(
-    context,
-    maxRowLength,
+  const { textNoAnsi, text } = parseText(context, {
+    maxLength: maxRowLength,
     indentBefore,
-    indentAfter
-  );
+    indentAfter,
+  });
 
   if (textNoAnsi.length === maxRowLength) {
     return textNoAnsi;

@@ -1,4 +1,4 @@
-export * from './core/parseText';
+export * from './core/other/parseText';
 export * from './core/characterSequence';
 export * from './core/line';
 export * from './core/rowText';

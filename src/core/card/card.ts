@@ -1,5 +1,5 @@
 import { characterSequence } from '../characterSequence';
-import { parseText } from '../parseText';
+import { parseText } from '../other/parseText';
 import { render } from '../render';
 import { rowText } from '../rowText';
 import { CardOptions, CardTitle } from './types';
@@ -50,7 +50,7 @@ export function card(
   let width = 0;
   let body = context
     .map((item) => {
-      const { textNoAnsi, text } = parseText(item, 1000);
+      const { textNoAnsi, text } = parseText(item);
       const length =
         textNoAnsi.length + beforeContext.length + affterContext.length;
 
