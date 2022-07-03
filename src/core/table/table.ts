@@ -10,7 +10,7 @@ import {
 import { tableRow } from './tableRow';
 import { tableBorder } from './tableBorder';
 import { render } from '../render';
-import { line } from '../line';
+import { line } from '../other/line';
 import { rowText } from '../rowText';
 
 function parseOptions(options: TableOptions = {}) {

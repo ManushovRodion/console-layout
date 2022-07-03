@@ -1,6 +1,6 @@
 export * from './core/other/parseText';
 export * from './core/other/characterSequence';
-export * from './core/line';
+export * from './core/other/line';
 export * from './core/rowText';
 export * from './core/render';
 
