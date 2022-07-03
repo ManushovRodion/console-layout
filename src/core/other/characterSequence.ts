@@ -1,3 +1,3 @@
 export function characterSequence(char: string, length: number) {
-  return new Array(length).fill(char[0]).join('');
+  return char[0].repeat(length);
 }
