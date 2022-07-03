@@ -2,11 +2,11 @@
 
 # CONSOLE-LAYOUT
 
-- [parseText](./api/OTHER-RU.md#parse-text)
-- [rowText](./api/OTHER-RU.md#row-text)
-- [characterSequence](./api/OTHER-RU.md#character-sequence)
-- [line](./api/OTHER-RU.md#line)
-- [render](./api/OTHER-RU.md#render)
+- [parseText](./OTHER-RU.md#parse-text)
+- [rowText](./OTHER-RU.md#row-text)
+- [characterSequence](./OTHER-RU.md#character-sequence)
+- [line](./OTHER-RU.md#line)
+- [render](./OTHER-RU.md#render)
 
 ---
 
@@ -145,20 +145,20 @@ console.log(context);
 
 ## # Документация
 
-- [Положение текста](./api/TEXT-ALIGN-RU.md)
-  - [textLeft](./api/TEXT-ALIGN-RU.md#text-left)
-  - [textCenter](./api/TEXT-ALIGN-RU.md#text-center)
-  - [textRight](./api/TEXT-ALIGN-RU.md#text-right)
-- [Таблица](./api/TABLE-RU.md)
-  - [table](./api/TABLE-RU.md#table)
-  - [tableBorder](./api/TABLE-RU.md#table-border)
-  - [tableRow](./api/TABLE-RU.md#table-row)
-  - [tableCol](./api/TABLE-RU.md#table-col)
-- [Карточка](./api/CARD-RU.md)
-  - [card](./api/CARD-RU.md#card)
-- [Прочие утилиты](./api/OTHER-RU.md)
-  - [parseText](./api/OTHER-RU.md#parse-text)
-  - [rowText](./api/OTHER-RU.md#row-text)
-  - [characterSequence](./api/OTHER-RU.md#character-sequence)
-  - [line](./api/OTHER-RU.md#line)
-  - [render](./api/OTHER-RU.md#render)
+- [Положение текста](./TEXT-ALIGN-RU.md)
+  - [textLeft](./TEXT-ALIGN-RU.md#text-left)
+  - [textCenter](./TEXT-ALIGN-RU.md#text-center)
+  - [textRight](./TEXT-ALIGN-RU.md#text-right)
+- [Таблица](./TABLE-RU.md)
+  - [table](./TABLE-RU.md#table)
+  - [tableBorder](./TABLE-RU.md#table-border)
+  - [tableRow](./TABLE-RU.md#table-row)
+  - [tableCol](./TABLE-RU.md#table-col)
+- [Карточка](./CARD-RU.md)
+  - [card](./CARD-RU.md#card)
+- [Прочие утилиты](./OTHER-RU.md)
+  - [parseText](./OTHER-RU.md#parse-text)
+  - [rowText](./OTHER-RU.md#row-text)
+  - [characterSequence](./OTHER-RU.md#character-sequence)
+  - [line](./OTHER-RU.md#line)
+  - [render](./OTHER-RU.md#render)
