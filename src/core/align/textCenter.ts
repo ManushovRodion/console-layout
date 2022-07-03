@@ -8,19 +8,19 @@ export function textCenter(
   indentBefore = 0,
   indentAfter = 0
 ) {
-  const { fullText, text } = parseText(
+  const { textNoAnsi, text } = parseText(
     context,
     maxRowLength,
     indentBefore,
     indentAfter
   );
 
-  if (fullText.length === maxRowLength) {
-    return fullText;
+  if (textNoAnsi.length === maxRowLength) {
+    return textNoAnsi;
   }
 
   let after, before;
-  const maxLength = maxRowLength - fullText.length;
+  const maxLength = maxRowLength - textNoAnsi.length;
 
   if (maxLength % 2) {
     after = characterSequence(' ', Math.floor(maxLength / 2));

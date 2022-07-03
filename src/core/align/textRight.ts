@@ -8,16 +8,16 @@ export function textRight(
   indentBefore = 0,
   indentAfter = 0
 ) {
-  const { fullText, text } = parseText(
+  const { textNoAnsi, text } = parseText(
     context,
     maxRowLength,
     indentBefore,
     indentAfter
   );
 
-  if (fullText.length === maxRowLength) {
-    return fullText;
+  if (textNoAnsi.length === maxRowLength) {
+    return textNoAnsi;
   }
 
-  return `${characterSequence(' ', maxRowLength - fullText.length)}${text}`;
+  return `${characterSequence(' ', maxRowLength - textNoAnsi.length)}${text}`;
 }

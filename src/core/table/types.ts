@@ -1,6 +1,4 @@
-import { Context, TypeResult } from '../types';
-
-export type TextAlign = 'left' | 'right' | 'center';
+import { Context, TextAlign, TypeResult } from '../types';
 
 export type TableColumn = {
   name: string;

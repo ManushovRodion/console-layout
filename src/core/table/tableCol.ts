@@ -1,8 +1,7 @@
 import { textCenter } from '../align/textCenter';
 import { textLeft } from '../align/textLeft';
 import { textRight } from '../align/textRight';
-import { Context } from '../types';
-import { TextAlign } from './types';
+import { Context, TextAlign } from '../types';
 
 export function tableCol(
   context: Context,

@@ -2,20 +2,7 @@ import { characterSequence } from '../characterSequence';
 import { parseText } from '../parseText';
 import { render } from '../render';
 import { rowText } from '../rowText';
-
-type CardOptions = {
-  borderHorizonChar?: string;
-  borderVerticalChar?: string;
-  borderXChar?: string;
-  typeResult?: 'string' | 'array';
-  hidePadding?: boolean;
-  viewMargin?: boolean;
-};
-
-export type CardTitle = {
-  text: string;
-  textAlign?: 'left' | 'right' | 'center';
-};
+import { CardOptions, CardTitle } from './types';
 
 function parseOptions(options: CardOptions = {}) {
   let { borderHorizonChar } = options;
@@ -61,16 +48,26 @@ export function card(
   const affterContext = `${fullPadding}${opt.borderVerticalChar}${margin}`;
 
   let width = 0;
-  const body = context.map((item) => {
-    const text = `${beforeContext}${item}${affterContext}`;
-    const { fullText, context } = parseText(text, 1000);
+  let body = context
+    .map((item) => {
+      const { textNoAnsi, text } = parseText(item, 1000);
+      const length =
+        textNoAnsi.length + beforeContext.length + affterContext.length;
 
-    if (fullText.length > width) {
-      width = fullText.length;
-    }
+      if (length > width) width = length;
+      return { textNoAnsi, item: text };
+    })
+    .map(({ textNoAnsi, item }) => {
+      let resultItem = item;
+      const length =
+        textNoAnsi.length + beforeContext.length + affterContext.length;
 
-    return context;
-  });
+      if (length < width) {
+        resultItem = `${item}${characterSequence(' ', width - length)}`;
+      }
+
+      return `${beforeContext}${resultItem}${affterContext}`;
+    });
 
   let widthLine = 2;
   if (opt.viewMargin) widthLine += 2;
@@ -100,7 +97,7 @@ export function card(
   const titleList = Array.isArray(title) ? title : [title];
 
   const head = titleList.map((title) => {
-    const text = `${fullPadding}${title.text}${fullPadding}`;
+    const text = `${fullPadding}${title.context}${fullPadding}`;
     const row = rowText(
       text,
       opt.viewMargin ? width - 2 : width,
