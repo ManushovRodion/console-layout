@@ -30,11 +30,11 @@ console.log(context.join('\n'));
 
 ![demo.png](./../assets/DEMO_CARD.png)
 
-| Argument | Name    | Type                       | Required | Default | Description                                            |
-| -------- | ------- | -------------------------- | -------- | ------- | ------------------------------------------------------ |
-| 1        | context | string[]                   | true     | -       | an array of strings that will be drawn inside the card |
-| 2        | title   | CardTitle \|\| CardTitle[] | false    | []      | data for rendering the card header                     |
-| 3        | options | CardOptions                | false    | -       | card options                                           |
+| Argument | Name    | Type                     | Required | Default | Description                                            |
+| -------- | ------- | ------------------------ | -------- | ------- | ------------------------------------------------------ |
+| 1        | context | string[]                 | true     | -       | an array of strings that will be drawn inside the card |
+| 2        | title   | CardTitle \| CardTitle[] | false    | []      | data for rendering the card header                     |
+| 3        | options | CardOptions              | false    | -       | card options                                           |
 
 #### тип **CardTitle**
 

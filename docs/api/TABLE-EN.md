@@ -44,44 +44,44 @@ console.log(context);
 
 ![demo.png](./../assets/DEMO_TABLE.png)
 
-| Argument | Name    | Type                            | Required | Default | Description                                                               |
-| -------- | ------- | ------------------------------- | -------- | ------- | ------------------------------------------------------------------------- |
-| 1        | columns | TableColumn[][]                 | true     | -       | two-dimensional array with table column options                           |
-| 2        | items   | TableItem[][], TableItemGroup[] | true     | -       | list of elements for the table (may contain both date and group elements) |
-| 3        | options | TableOptions                    | false    | -       | additional options for the table                                          |
+| Argument | Name    | Type                             | Required | Default | Description                                                               |
+| -------- | ------- | -------------------------------- | -------- | ------- | ------------------------------------------------------------------------- |
+| 1        | columns | TableColumn[][]                  | true     | -       | two-dimensional array with table column options                           |
+| 2        | items   | TableItem[][] & TableItemGroup[] | true     | -       | list of elements for the table (may contain both date and group elements) |
+| 3        | options | TableOptions                     | false    | -       | additional options for the table                                          |
 
 #### тип **TableColumn**
 
-| Key       | Type                       | Required | Default | Description                |
-| --------- | -------------------------- | -------- | ------- | -------------------------- |
-| name      | string                     | true     | -       | column name                |
-| width     | number                     | true     | -       | column width               |
-| textAlign | 'left', 'right' , 'center' | false    | 'left'  | title position in a column |
+| Key       | Type                          | Required | Default | Description                |
+| --------- | ----------------------------- | -------- | ------- | -------------------------- |
+| name      | string                        | true     | -       | column name                |
+| width     | number                        | true     | -       | column width               |
+| textAlign | 'left' \| 'right' \| 'center' | false    | 'left'  | title position in a column |
 
 #### тип **TableItem**
 
-| Key       | Type                       | Required | Default | Description                  |
-| --------- | -------------------------- | -------- | ------- | ---------------------------- |
-| context   | string, number             | true     | -       | element text                 |
-| textAlign | 'left', 'right' , 'center' | false    | 'left'  | position of text in a column |
+| Key       | Type                          | Required | Default | Description                  |
+| --------- | ----------------------------- | -------- | ------- | ---------------------------- |
+| context   | string \| number              | true     | -       | element text                 |
+| textAlign | 'left' \| 'right' \| 'center' | false    | 'left'  | position of text in a column |
 
 #### тип **TableItemGroup**
 
-| Key       | Type                       | Required | Default | Description         |
-| --------- | -------------------------- | -------- | ------- | ------------------- |
-| name      | string, number             | true     | -       | group text          |
-| textAlign | 'left', 'right' , 'center' | false    | 'left'  | group name position |
+| Key       | Type                          | Required | Default | Description         |
+| --------- | ----------------------------- | -------- | ------- | ------------------- |
+| name      | string \| number              | true     | -       | group text          |
+| textAlign | 'left' \| 'right' \| 'center' | false    | 'left'  | group name position |
 
 #### тип **TableOptions**
 
-| Key                     | Type               | Required | Default | Description                                                 |
-| ----------------------- | ------------------ | -------- | ------- | ----------------------------------------------------------- |
-| borderHorizonChar       | string             | false    | '-'     | horizontal border line symbol                               |
-| borderVerticalChar      | string             | false    | '\|'    | vertical border line symbol                                 |
-| borderXChar             | string             | false    | '#'     | symbol of the intersection of vertical and horizontal lines |
-| typeResult              | 'string' , 'array' | false    | 'array' | return type: string or array of strings                     |
-| hideOuterBorderHorizon  | boolean            | false    | false   | remove the horizontal line                                  |
-| hideOuterBorderVertical | boolean            | false    | false   | remove the vertical line                                    |
+| Key                     | Type                | Required | Default | Description                                                 |
+| ----------------------- | ------------------- | -------- | ------- | ----------------------------------------------------------- |
+| borderHorizonChar       | string              | false    | '-'     | horizontal border line symbol                               |
+| borderVerticalChar      | string              | false    | '\|'    | vertical border line symbol                                 |
+| borderXChar             | string              | false    | '#'     | symbol of the intersection of vertical and horizontal lines |
+| typeResult              | 'string' \| 'array' | false    | 'array' | return type: string or array of strings                     |
+| hideOuterBorderHorizon  | boolean             | false    | false   | remove the horizontal line                                  |
+| hideOuterBorderVertical | boolean             | false    | false   | remove the vertical line                                    |
 
 ### # TABLE-BORDER
 
@@ -148,11 +148,11 @@ console.log(context3); //  random text 1                X              random st
 
 #### тип **TableRowColumn**
 
-| Key       | Type                       | Required | Default | Description                  |
-| --------- | -------------------------- | -------- | ------- | ---------------------------- |
-| context   | string, number             | true     | -       | column content               |
-| width     | number                     | true     | -       | column width in characters   |
-| textAlign | 'left', 'right' , 'center' | false    | 'left'  | position of text in a column |
+| Key       | Type                          | Required | Default | Description                  |
+| --------- | ----------------------------- | -------- | ------- | ---------------------------- |
+| context   | string \| number              | true     | -       | column content               |
+| width     | number                        | true     | -       | column width in characters   |
+| textAlign | 'left' \| 'right' \| 'center' | false    | 'left'  | position of text in a column |
 
 #### тип **TableRowOptions**
 
@@ -179,11 +179,11 @@ const context = [
 console.log(context); // | text     |   text   |     text |
 ```
 
-| Argument | Name      | Type                       | Required | Default | Description                  |
-| -------- | --------- | -------------------------- | -------- | ------- | ---------------------------- |
-| 1        | context   | string, number             | true     | -       | column content               |
-| 2        | width     | number                     | true     | -       | column width                 |
-| 3        | textAlign | 'left', 'right' , 'center' | false    | 'left'  | position of text in a column |
+| Argument | Name      | Type                          | Required | Default | Description                  |
+| -------- | --------- | ----------------------------- | -------- | ------- | ---------------------------- |
+| 1        | context   | string \| number              | true     | -       | column content               |
+| 2        | width     | number                        | true     | -       | column width                 |
+| 3        | textAlign | 'left' \| 'right' \| 'center' | false    | 'left'  | position of text in a column |
 
 ## # Documentation
 

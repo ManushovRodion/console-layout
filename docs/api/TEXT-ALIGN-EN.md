@@ -22,12 +22,12 @@ const context3 = textLeft('0123456789', 10, 1, 1); // | 01234567 |
 console.log(`|${context3}|`);
 ```
 
-| Argument | Name         | Type           | Required | Default | Description                                                                                                                                |
-| -------- | ------------ | -------------- | -------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
-| 1        | context      | string, number | true     | -       | the text to be linked, in a line                                                                                                           |
-| 2        | maxRowLength | number         | true     | -       | forms a string of a certain length on which the text is placed. If the text does not fit, the result is truncated to the specified length. |
-| 3        | indentBefore | number         | false    | 0       | additional indent before text                                                                                                              |
-| 4        | indentAfter  | number         | false    | 0       | extra padding after text                                                                                                                   |
+| Argument | Name         | Type             | Required | Default | Description                                                                                                                                |
+| -------- | ------------ | ---------------- | -------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
+| 1        | context      | string \| number | true     | -       | the text to be linked, in a line                                                                                                           |
+| 2        | maxRowLength | number           | true     | -       | forms a string of a certain length on which the text is placed. If the text does not fit, the result is truncated to the specified length. |
+| 3        | indentBefore | number           | false    | 0       | additional indent before text                                                                                                              |
+| 4        | indentAfter  | number           | false    | 0       | extra padding after text                                                                                                                   |
 
 ### # TEXT-RIGHT
 
@@ -49,12 +49,12 @@ const context3 = textRight('0123456789', 10, 1, 1); // | 01234567 |
 console.log(`|${context3}|`);
 ```
 
-| Argument | Name         | Type           | Required | Default | Description                                                                                                                                |
-| -------- | ------------ | -------------- | -------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
-| 1        | context      | string, number | true     | -       | the text to be linked, in a line                                                                                                           |
-| 2        | maxRowLength | number         | true     | -       | forms a string of a certain length on which the text is placed. If the text does not fit, the result is truncated to the specified length. |
-| 3        | indentBefore | number         | false    | 0       | additional indent before text                                                                                                              |
-| 4        | indentAfter  | number         | false    | 0       | extra padding after text                                                                                                                   |
+| Argument | Name         | Type             | Required | Default | Description                                                                                                                                |
+| -------- | ------------ | ---------------- | -------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
+| 1        | context      | string \| number | true     | -       | the text to be linked, in a line                                                                                                           |
+| 2        | maxRowLength | number           | true     | -       | forms a string of a certain length on which the text is placed. If the text does not fit, the result is truncated to the specified length. |
+| 3        | indentBefore | number           | false    | 0       | additional indent before text                                                                                                              |
+| 4        | indentAfter  | number           | false    | 0       | extra padding after text                                                                                                                   |
 
 ### # TEXT-CENTER
 
@@ -76,12 +76,12 @@ const context3 = textCenter('0123456789', 10, 1, 1); // | 01234567 |
 console.log(`|${context3}|`);
 ```
 
-| Argument | Name         | Type           | Required | Default | Description                                                                                                                                |
-| -------- | ------------ | -------------- | -------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
-| 1        | context      | string, number | true     | -       | the text to be linked, in a line                                                                                                           |
-| 2        | maxRowLength | number         | true     | -       | forms a string of a certain length on which the text is placed. If the text does not fit, the result is truncated to the specified length. |
-| 3        | indentBefore | number         | false    | 0       | additional indent before text                                                                                                              |
-| 4        | indentAfter  | number         | false    | 0       | extra padding after text                                                                                                                   |
+| Argument | Name         | Type             | Required | Default | Description                                                                                                                                |
+| -------- | ------------ | ---------------- | -------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
+| 1        | context      | string \| number | true     | -       | the text to be linked, in a line                                                                                                           |
+| 2        | maxRowLength | number           | true     | -       | forms a string of a certain length on which the text is placed. If the text does not fit, the result is truncated to the specified length. |
+| 3        | indentBefore | number           | false    | 0       | additional indent before text                                                                                                              |
+| 4        | indentAfter  | number           | false    | 0       | extra padding after text                                                                                                                   |
 
 ## # Documentation
 
