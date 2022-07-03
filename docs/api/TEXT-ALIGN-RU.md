@@ -2,6 +2,12 @@
 
 # CONSOLE-LAYOUT
 
+- [textLeft](./api/TEXT-ALIGN-RU.md#text-left)
+- [textCenter](./api/TEXT-ALIGN-RU.md#text-center)
+- [textRight](./api/TEXT-ALIGN-RU.md#text-right)
+
+---
+
 ### # TEXT-LEFT
 
 Утилита, которая позволяет сформировать строку определеной длины и разместить в данной области текст слева. Если текст не помещается в длину строки, то текст обрезается до заданной длины.
@@ -85,6 +91,20 @@ console.log(`|${context3}|`);
 
 ## # Документация
 
-- [Таблица](./TABLE-RU.md)
-- [Карточка](./CARD-RU.md)
-- [Разные api](./OTHER-RU.md)
+- [Положение текста](./api/TEXT-ALIGN-RU.md)
+  - [textLeft](./api/TEXT-ALIGN-RU.md#text-left)
+  - [textCenter](./api/TEXT-ALIGN-RU.md#text-center)
+  - [textRight](./api/TEXT-ALIGN-RU.md#text-right)
+- [Таблица](./api/TABLE-RU.md)
+  - [table](./api/TABLE-RU.md#table)
+  - [tableBorder](./api/TABLE-RU.md#table-border)
+  - [tableRow](./api/TABLE-RU.md#table-row)
+  - [tableCol](./api/TABLE-RU.md#table-col)
+- [Карточка](./api/CARD-RU.md)
+  - [card](./api/CARD-RU.md#card)
+- [Прочие утилиты](./api/OTHER-RU.md)
+  - [parseText](./api/OTHER-RU.md#parse-text)
+  - [rowText](./api/OTHER-RU.md#row-text)
+  - [characterSequence](./api/OTHER-RU.md#character-sequence)
+  - [line](./api/OTHER-RU.md#line)
+  - [render](./api/OTHER-RU.md#render)
