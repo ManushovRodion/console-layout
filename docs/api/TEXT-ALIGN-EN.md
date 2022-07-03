@@ -2,6 +2,12 @@
 
 # CONSOLE-LAYOUT
 
+- [textLeft](./TEXT-ALIGN-EN.md#-text-left)
+- [textRight](./TEXT-ALIGN-EN.md#-text-right)
+- [textCenter](./TEXT-ALIGN-EN.md#-text-center)
+
+---
+
 ### # TEXT-LEFT
 
 A utility that allows you to form a string of a certain length and place text on the left in this area. If the text does not fit within the line length, then the text is truncated to the specified length.
@@ -85,6 +91,20 @@ console.log(`|${context3}|`);
 
 ## # Documentation
 
+- [Text Align](./TEXT-ALIGN-EN.md)
+  - [textLeft](./TEXT-ALIGN-EN.md#-text-left)
+  - [textRight](./TEXT-ALIGN-EN.md#-text-right)
+  - [textCenter](./TEXT-ALIGN-EN.md#-text-center)
 - [Table](./TABLE-EN.md)
+  - [table](./TABLE-EN.md#-table)
+  - [tableBorder](./TABLE-EN.md#-table-border)
+  - [tableRow](./TABLE-EN.md#-table-row)
+  - [tableCol](./TABLE-EN.md#-table-col)
 - [Card](./CARD-EN.md)
+  - [card](./CARD-EN.md#-card)
 - [Other](./OTHER-EN.md)
+  - [parseText](./OTHER-EN.md#-parse-text)
+  - [rowText](./OTHER-EN.md#-row-text)
+  - [characterSequence](./OTHER-EN.md#-character-sequence)
+  - [line](./OTHER-EN.md#-line)
+  - [render](./OTHER-EN.md#-render)

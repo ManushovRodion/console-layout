@@ -2,6 +2,13 @@
 
 # CONSOLE-LAYOUT
 
+- [table](./TABLE-EN.md#-table)
+- [tableBorder](./TABLE-EN.md#-table-border)
+- [tableRow](./TABLE-EN.md#-table-row)
+- [tableCol](./TABLE-EN.md#-table-col)
+
+---
+
 ### # TABLE
 
 The main utility that allows you to assemble the tablet in the console. There are auxiliary utilities that create their own version of the table. Arrays of strings are stored by default.
@@ -188,5 +195,19 @@ console.log(context); // | text     |   text   |     text |
 ## # Documentation
 
 - [Text Align](./TEXT-ALIGN-EN.md)
+  - [textLeft](./TEXT-ALIGN-EN.md#-text-left)
+  - [textRight](./TEXT-ALIGN-EN.md#-text-right)
+  - [textCenter](./TEXT-ALIGN-EN.md#-text-center)
+- [Table](./TABLE-EN.md)
+  - [table](./TABLE-EN.md#-table)
+  - [tableBorder](./TABLE-EN.md#-table-border)
+  - [tableRow](./TABLE-EN.md#-table-row)
+  - [tableCol](./TABLE-EN.md#-table-col)
 - [Card](./CARD-EN.md)
+  - [card](./CARD-EN.md#-card)
 - [Other](./OTHER-EN.md)
+  - [parseText](./OTHER-EN.md#-parse-text)
+  - [rowText](./OTHER-EN.md#-row-text)
+  - [characterSequence](./OTHER-EN.md#-character-sequence)
+  - [line](./OTHER-EN.md#-line)
+  - [render](./OTHER-EN.md#-render)

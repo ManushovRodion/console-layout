@@ -2,6 +2,10 @@
 
 # CONSOLE-LAYOUT
 
+- [card](./CARD-EN.md#-card)
+
+---
+
 ### # CARD
 
 A utility that allows you to draw a card with data. How to draw a card without a hat.
@@ -57,5 +61,19 @@ console.log(context.join('\n'));
 ## # Documentation
 
 - [Text Align](./TEXT-ALIGN-EN.md)
+  - [textLeft](./TEXT-ALIGN-EN.md#-text-left)
+  - [textRight](./TEXT-ALIGN-EN.md#-text-right)
+  - [textCenter](./TEXT-ALIGN-EN.md#-text-center)
 - [Table](./TABLE-EN.md)
+  - [table](./TABLE-EN.md#-table)
+  - [tableBorder](./TABLE-EN.md#-table-border)
+  - [tableRow](./TABLE-EN.md#-table-row)
+  - [tableCol](./TABLE-EN.md#-table-col)
+- [Card](./CARD-EN.md)
+  - [card](./CARD-EN.md#-card)
 - [Other](./OTHER-EN.md)
+  - [parseText](./OTHER-EN.md#-parse-text)
+  - [rowText](./OTHER-EN.md#-row-text)
+  - [characterSequence](./OTHER-EN.md#-character-sequence)
+  - [line](./OTHER-EN.md#-line)
+  - [render](./OTHER-EN.md#-render)

@@ -23,9 +23,22 @@ yarn add console-layout
 ## # Documentation
 
 - [Text Align](./api/TEXT-ALIGN-EN.md)
+  - [textLeft](./api/TEXT-ALIGN-EN.md#-text-left)
+  - [textRight](./api/TEXT-ALIGN-EN.md#-text-right)
+  - [textCenter](./api/TEXT-ALIGN-EN.md#-text-center)
 - [Table](./api/TABLE-EN.md)
+  - [table](./api/TABLE-EN.md#-table)
+  - [tableBorder](./api/TABLE-EN.md#-table-border)
+  - [tableRow](./api/TABLE-EN.md#-table-row)
+  - [tableCol](./api/TABLE-EN.md#-table-col)
 - [Card](./api/CARD-EN.md)
+  - [card](./api/CARD-EN.md#-card)
 - [Other](./api/OTHER-EN.md)
+  - [parseText](./api/OTHER-EN.md#-parse-text)
+  - [rowText](./api/OTHER-EN.md#-row-text)
+  - [characterSequence](./api/OTHER-EN.md#-character-sequence)
+  - [line](./api/OTHER-EN.md#-line)
+  - [render](./api/OTHER-EN.md#-render)
 
 ## # License
 
