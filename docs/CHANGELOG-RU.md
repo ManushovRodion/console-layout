@@ -11,5 +11,5 @@
 fixs:
 
 - textLeft: Не возвращается ANSI символы.
-- textКight: Не возвращается ANSI символы.
+- textRight: Не возвращается ANSI символы.
 - textCenter: Не возвращается ANSI символы.

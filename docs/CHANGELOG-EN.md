@@ -11,5 +11,5 @@ Package release `console-layout`
 fixs:
 
 - textLeft: It returns ANSI characters.
-- textКight: It returns ANSI characters.
+- textRight: It returns ANSI characters.
 - textCenter: It returns ANSI characters.
