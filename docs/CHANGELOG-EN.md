@@ -2,6 +2,6 @@
 
 # CONSOLE-LAYOUT
 
-### # v1.0.0 (2022-07-04)
+### # v1.0.1 (2022-07-04)
 
 Package release `console-layout`
