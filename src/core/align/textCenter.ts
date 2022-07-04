@@ -15,7 +15,7 @@ export function textCenter(
   });
 
   if (textNoAnsi.length === maxRowLength) {
-    return textNoAnsi;
+    return text;
   }
 
   let after, before;

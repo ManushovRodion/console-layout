@@ -15,7 +15,7 @@ export function textLeft(
   });
 
   if (textNoAnsi.length === maxRowLength) {
-    return textNoAnsi;
+    return text;
   }
 
   return `${text}${characterSequence(' ', maxRowLength - textNoAnsi.length)}`;
