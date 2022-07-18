@@ -34,7 +34,8 @@
   "scripts": {
     "lint": "eslint",
     "lint:format": "prettier --write .",
-    "build": "ts-node scripts/build.ts"
+    "build": "ts-node scripts/build.ts",
+    "demo:cli": "ts-node example/card.ts"
   },
   "dependencies": {},
   "devDependencies": {
